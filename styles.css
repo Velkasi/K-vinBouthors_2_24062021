@@ -1,0 +1,52 @@
+/* Font */
+@font-face {
+    font-family: 'Raleway800';
+    src: url(https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap);
+    font-size: 130%;
+}
+
+@font-face {
+    font-family: 'Raleway100';
+    src: url(https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap);
+}
+
+body {
+    cursor: alias ;
+}
+
+h2, h3 {
+    font-family: 'Raleway800', sans-serif;
+}
+
+.Font_head, strong {
+    font-size: 130%;
+    font-weight: 700;
+    font-family: 'Raleway800', sans-serif;
+}
+
+.Font_sub {
+    font-size: 100%;
+    font-family: 'Raleway800', sans-serif;
+}
+
+p, li {
+    font-family: 'Raleway100', sans-serif;
+}
+
+a:visited {
+    color: #0065fc;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+nav  {
+    color: cyan;
+}
+ul {
+    list-style: none;
+}
+/* Media queries 
+@media all and (max-width: 1280px)
+*/
