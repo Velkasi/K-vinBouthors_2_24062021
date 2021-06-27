@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" />
         <script src="https://kit.fontawesome.com/081ad5b325.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
         <link rel="Icon" href="Reservia/images/logo/Reservia@3x.png" type="image/icon">
@@ -11,7 +12,7 @@
 
     <body>
         <!-- Logo et titre -->
-        <header>
+        <header id="head-box">
             <img src="Reservia/images/logo/Reservia.svg" alt="Logo Reservia">
             <h2>Trouver votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
@@ -27,68 +28,70 @@
                 <a href="#">Animaux autorisés</a>
             <br/>
            <p><img src="Reservia/images/logo/info.png" alt="Logo information"> Plus de 500 logements sont disponibles dans cette ville</p>
-        </header>
     
-
         <!-- Menu ancres et inscription -->
 
         <nav>
             <ul>
-                <li><a href="#Hebergement">Hébergements</a></li></span>
-                <li><a href="#Activites">Activités</a></li>
-                <li><a href="#">S'inscrire</a></li>
+                <li><a href="#Hebergement"><span class="font_blue">Hébergements</span></a></li>
+                <li><a href="#Activites"><span class="font_blue">Activités</span></a></li>
+                <li><a href="#"><span class="font_blue">S'inscrire</span></a></li>
             </ul>
         </nav>
-        
-
-        <section>
-            <article> 
+            </header>
+        <section id="main">
+            <article id="center"> 
                 <h2 id="Hebergement">Hébergements à Marseille</h2>             
                 <br/>
                 <br/>
-                <div class="Font_head">Auberge La Cannebière</div>
-                <img src="Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo Auberge de la Cannebiere a 25€">
-                    <p>Nuit à partir de 25€</p>
-
-                <div class="Font_head">Hôtel du port</div>
-                <img src="Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo Hôtel du port a 52€">
-                <p>Nuit à partir de 52€</p>
-
-                <div class="Font_head">Hôtel Les mouettes</div>
-                <img src="Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo Hôtel Les mouettes a 76€">
-                <p>Nuit à partir de 76€</p>
-
-                <div class="Font_head">Hôtel de la mer</div>
-                <img src="Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo Hôtel de la mer a 46€">
-                <p>Nuit à partir de 46€</p>
-
-                <div class="Font_head">Auberge Le Panier</div>
-                <img src="Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo Auberge Le panier a 23€">
-                <p>Nuit à partir de 23€</p>
-
-                <div class="Font_head">Hôtel chez Amina</div>
-                <img src="Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo Hôtel chez Amina a 96€">
-                <p>Nuit à partir de 96€</p>               
+                <div id="border-img1">
+                <img id="img1" src="Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo Auberge de la Cannebiere a 25€"></div>
+                <div class="Subtitle">
+                <span id="Font_head1">Auberge La Cannebière</span>
+                <p>Nuit à partir de 25€</p> </div>
+                <div id="border-img2">          
+                <img id="img2" src="Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo Hôtel du port a 52€"></div>
+                <div class="Subtitle">
+                <span id="Font_head2">Hôtel du port</span>
+                <p>Nuit à partir de 52€</p> </div>
+                <div id="border-img3">             
+                <img id="img3" src="Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo Hôtel Les mouettes a 76€"></div>
+                <div class="Subtitle">
+                <span id="Font_head3">Hôtel Les mouettes</span>
+                 <p>Nuit à partir de 76€</p></div>
+                 <div id="border-img4">             
+                <img id="img4" src="Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo Hôtel de la mer a 46€"></div>
+                <div class="Subtitle">
+                <span id="Font_head4">Hôtel de la mer</span>
+                <p>Nuit à partir de 46€</p></div>
+                <div id="border-img5">             
+                <img id="img5" src="Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo Auberge Le panier a 23€"></div>
+                <div class="Subtitle">
+                <span id="Font_head5">Auberge Le Panier</span>
+                <p>Nuit à partir de 23€</p></div>
+                <div id="border-img6">
+                <img id="img6" src="Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo Hôtel chez Amina a 96€">
+            
+                <span id="Font_head6">Hôtel chez Amina</span>
+                <p>Nuit à partir de 96€</p></div>         
                 <br/>
                 <br/>
-                <div class="Font_sub">Afficher plus</div>                
+                <div class="Font_sub1"><a href="#">Afficher plus</a></div>                
                 <br/>
                 <br/>
             </article>
             <!-- Right part /////////// NOTE POUR 25/06/2021, BIEN PENSER A TESTER LE <SPAN> OU LE <DIV> (je crois que c'est mieu DIV) POUR LE DISPLAYBLOCK DES IMAGES ET DU TEXTE DESSOUS ///////          -->
-            <aside>
-                <div class="Font_head">Les plus populaires</div>
+            <aside id="cote">
+                <span id="Font_head7">Les plus populaires</span>
                 <br/>
                 <br/>
-                <div class="Font_head">Hôtel Le soleil du matin</div>
+                <span id="Font_head8">Hôtel Le soleil du matin</span>
                 <img src="Reservia/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo Hôtel Le soleil du matin a 128€">
                 <p>Nuit à partir de 128€</p>
-
-                <div class="Font_head">Au coeur de l'eau Chambre d'hotes</div>
+                <span id="Font_head9">Au coeur de l'eau Chambre d'hotes</span>
                 <img src="Reservia/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo Au coeur de l'eau Chambre d'hôtes">
                 <p>Nuit à partir de 71€</p>
-
-                <div class="Font_head">Hôtel Tout bleu et Blanc</div>
+                <span id="Font_head10">Hôtel Tout bleu et Blanc</span>
                 <img src="Reservia/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo Hôtel tout bleu et blanc">
                 <p>Nuit à partir de 68€</p>
                 <br/>
@@ -97,47 +100,52 @@
         </section>
         <section>
             <!--Lower part-->
-            <article>
+            <article id="activity">
                 <h2 id="Activites">Activités à Marseille</h2>
-                <h3>Vieux Port</h3>
+                
                 <img src="Reservia/images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux port">
-
-                <h3>Fort de Pomègues</h3>
+                <h3>Vieux Port</h3>                
                 <img src="Reservia/images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du Fort de Pomègues">
-
-                <h3>Îles du Frioul</h3>
+                <h3>Fort de Pomègues</h3> 
                 <img src="Reservia/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo de l'îles du Frioul">
-
-                <h3>Parc National des Calanques</h3>
+                <h3>Îles du Frioul</h3>          
                 <img src="Reservia/images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du Parc national des Calanques">
-
-                <h3>Notre-Dame-de-la-Garde</h3>
+                <h3>Parc National des Calanques</h3>             
                 <img src="Reservia/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo de Notre-Dame-de-la-Garde">
-
-                <h3>Parc Longchamp</h3>
+                <h3>Notre-Dame-de-la-Garde</h3>
                 <img src="Reservia/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du parc Longchamp">
+                <h3>Parc Longchamp</h3>
 
             </article>
         </section>
             <!--A propos / Nos hébergements / Assistance-->
-        <footer>
-            <ul>
-                <li><strong>A propos</strong></li>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales de vente</a></li>
-                    <li><a href="#">Donnée et confidentialités</a></li>
-            </ul>
-            <ul>
-                <li><strong> hébergements</strong></li>
-                    <li><a href="#">Charte qualité</a></li>
-                    <li><a href="#">Soumettre votre hôtel</a></li>
-            </ul>
-            <ul>
-                <li><strong>Assistance</strong></li>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-            </ul>
-        </footer>
+            <footer id="foot">
+                <div class="Font_sub2">A propos</div>
+                <br/>
+                    <a href="#1">Fonctionnement du site</a>
+                    <br/>
+                    <a href="#2">Conditions générales de vente</a>
+                    <br/>
+                    <a href="#3">Donnée et confidentialités</a>
+                    <br/>
+                
+                
+                <div id="Charte">
+                <div class="Font_sub3">hébergements</div>
+                <br/>
+                    <a href="#4">Charte qualité</a>
+                    <br/>
+                    <a href="#5">Soumettre votre hôtel</a>
+                    <br/>
+                </div>
+            
+                <div class="Font_sub4">Assistance</div>
+                <br/>
+                    <a href="#6">Centre d'aide</a>
+                    <br/>
+                    <a href="#7">Nous contacter</a>
+                    <br/>
+                </footer>
         
     </body>
 </html>
