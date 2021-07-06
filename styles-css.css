@@ -1,0 +1,156 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@import url(Raleway/static/Raleway-Medium.ttf);
+
+body {
+    font-family: 'Raleway-Medium', sans-serif;
+    margin:15px
+}
+
+.container-grille {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:  1fr 1fr 4fr 1fr ;
+    grid-gap:20px;
+    grid-template-areas: 
+    "header header header nav"
+    "main main main aside"
+    "section section section section"
+    "footer footer footer footer"
+    ;
+
+}
+
+header {
+    grid-column: span 1;
+    padding: 30px;
+    font-size: 15px;
+    background-color: #17BEBB;
+    color: #fff;
+    grid-area: header;
+}
+
+nav {
+    background-color: #EF3E36;
+    grid-area: nav;
+}
+
+ul {
+    margin: 10px;
+    display: flex;
+}
+
+li {
+    margin: 5px;
+}
+
+.liste-sidenav {
+    list-style-type: none;
+    max-height: 650px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.liste-sidenav li {
+    height: 40px;
+    display: flex;
+}
+
+.liste-sidenav li a {
+    font-size: 18px;
+    color:#0065FC ;
+}
+
+/*Main part*/
+
+main {
+    background-color: goldenrod;
+    padding: 20px;
+    grid-area: main;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+/*Aside part*/
+
+aside {
+    padding: 20px;
+    background-color: #edb88b;
+    font-size: 22px;
+    color: #333;
+    grid-area: aside;
+}
+aside p {
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*Section part*/
+
+section {
+    background-color: cadetblue;
+    grid-column: span 2;
+    align-items: center;
+    grid-area: section;
+}
+
+/*Footer part*/
+
+footer {
+    grid-column: span 2;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    background-color: grey;
+    color: #fff;
+    grid-area: footer;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1280px) {
+
+    .container-grille {
+        grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "aside"
+        "main"
+        "section"
+        "footer"
+        ;
+    }
+    
+    .liste-sidenav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .liste-sidenav li {
+        margin: 0 10px;
+    }
+    main p {
+        min-height: 610px;
+    }
+    aside p {
+        height: auto;
+    }
+
+    footer section {
+        grid-column: 1fr;
+    }
+}
