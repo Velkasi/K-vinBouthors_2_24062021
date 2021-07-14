@@ -51,14 +51,14 @@ table {
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr 4fr 1fr ;
-    grid-gap: 20px;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr 1fr 3fr 1fr ;
+    grid-gap: 10px;
     grid-template-areas: 
-    "header header header "
-    "main main aside"
-    "section section section"
-    "footer footer footer"
+    "header header header header header header"
+    "main main main main aside aside"
+    "section section section section section section"
+    "footer footer footer footer footer footer"
     ;
 
 }
@@ -89,6 +89,9 @@ input {
     height: 47px;
     width: 90px;
 }
+.btn-icone {
+    display: none;
+}
 /*------------------------Filtre header + Li / Ul-------------------------*/
 header {
     margin: 30px;
@@ -98,6 +101,9 @@ header {
     grid-area: header;
     display: flex;
     flex-direction: column;
+}
+header p {
+    display: none;
 }
 ul {
     display: flex;
@@ -133,7 +139,9 @@ strong {
     font-size: 18px ;
     color:#0065FC ;
 }
-
+hr.line {
+    display: none;
+}
 .logo-aside2 {
     margin-right: 5px;
     width:15px;
@@ -145,23 +153,37 @@ strong {
 }
 /*-----------------------Logo-------------------------*/
 
-.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog {
+.fa-money-bill-wave , .fa-child, .fa-heart, .fa-dog {
     color: #0065FC;
     background-color:#DEEBFF;
     margin-right: 10px;
     border-radius: 50%;
     height: 45px ;
     width: 45px ;
-    padding: 15px;
+}
+.fa-money-bill-wave {
+    padding: 14px;
+}
+.fa-child {
+    padding-top: 15px;
+    padding-left: 17px;
+}
+.fa-heart {
+    padding-top: 15px;
+    padding-left: 16px;
+}
+.fa-dog {
+    padding-top: 13px;
+    padding-left: 15px;
 }
 .fa-info {
     color: #0065FC;
     border: solid #f2f2f2;
     border-radius: 50%;
     height: 30px;
-    width: 30px;
     padding-left: 10px;
     padding-top: 5px;
+    width: 30px;
     margin: 3px;
 }
 .logo-align {
@@ -201,19 +223,28 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     margin: 10px;
-    margin-top: 10%;
-    margin-bottom: 10%;
+}
+#link-main {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 50px;
+    margin-right: 80%;
+}
+#link-main:hover {
+    color: #0065FC;
 }
 .galerie-item {
     margin: 10px;
-    width: 300px;
+    width: 325px;
     border-radius: 30px;
     box-shadow: 10px 5px 5px #e8e8e8;
 }
 .galerie-item a {
     display: flex;
-    height: 150px;
+    height: 220px;
 }
 .galerie-item img {
     background-color: white;
@@ -247,7 +278,7 @@ aside p {
     justify-content: center;
     align-items: flex-start;
 }
-.logo-aside {
+.fa-chart-line {
     float: right;
     width: 30px;
     display: flex;
@@ -430,9 +461,13 @@ footer {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 5px;
+}
+footer li  {
+    margin-top: 10px;
 }
 .title {
-    margin-left: 15px;
+    margin-left: 30px;
 }
 .liste-footer1 {
     display: flex;
@@ -448,6 +483,7 @@ footer {
     list-style-type: none;
     max-height: 650px;
     grid-column: 2;
+    grid-row: 1;
 }
 .liste-footer3 {
     display: flex;
@@ -456,14 +492,16 @@ footer {
     list-style-type: none;
     max-height: 650px;
     grid-column: 3;
+    grid-row: 1;
 }
 /*-----------------------Media Queries 1350px-----------------------*/
-/*-----------------------Faire le media queries de 999px a 1250px---------------*/
-@media screen and (max-width: 1333px) {
+/*-----------------------Faire le media queries de 1243px a 1518px---------------*/
+@media screen and (max-width: 1312px) {
     body {
         margin:0px
     }
     main, aside, header{
+        padding: 10px;
         margin: 0px;
         border-radius: 0px;
     }
@@ -480,15 +518,78 @@ footer {
         ;
     }
 /*----------------------Header media queries-------------------*/
+header p {
+    display: flex;
+    margin-top: 15px;
+    float:right;
+}
+ul strong {
+    display: none;
+}
+nav ul {
+    justify-content: center;
+    margin-left: 80px;
+}
 
+.line-color:hover {
+    flex-grow: 12;
+}
+.line {
+    margin-top: 10px;
+    display: flex;
+    height: 3px;
+    width: 100%;
+}
+.line-color {
+    height: 3px;
+    margin: 0px;
+    flex-grow: 1;
+    transition: all .8s ease-in-out;
+}
+.blue {
+    background-color: #0065FC;
+}
+.grey {
+    background-color: #bbb;
+}
+
+.cool-link:hover {
+    border-top: transparent;
+}
+.liste-sidenav1 {
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+}
+.liste-sidenav1 ul {
+    flex-wrap: wrap;
+}
+.liste-sidenav {
+    flex-direction: row;
+    justify-content: center;
+}  
+.liste-sidenav li {
+    margin: 0 10px;
+}
 .logo-reservia {
     float: none;
 }
-
-.liste-sidenav {
+nav {
     display: flex;
-    margin-left: 0%;
-    border-bottom: outset #DEEBFF;
+    justify-content: center;
+}
+.btn {
+    display: none;
+}
+.btn-icone {
+    display: inline-block;
+    color: white;
+    border-color: #f2f2f2;
+    background-color:#0065FC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 47px;
+    width: 40px;
 }
 /*----------------------Main media queries---------------------*/
     main {
@@ -525,11 +626,11 @@ footer {
     height: auto;
     }
     .aside-item {
+    margin: 0px;
+    margin-bottom: 15px;
     padding: 5px;
-    display:flex;
+    display: flex;
     justify-content: center;
-    width: 90%;
-    
     }
     .aside-item img {
     border-top-left-radius: 30px;
@@ -537,6 +638,7 @@ footer {
     object-fit: cover;
     width: 100%;
     height: 200px;
+    margin: 0px;
     }
     .aside-text {
     border-top-right-radius: 30px;
@@ -551,12 +653,17 @@ footer {
     align-items: flex-start;
     }
 /*--------------------------Section Media queries---------------------*/
+section {
+    padding: 5px;
+}
 .grid-sec {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 .sec-item1, .sec-item2, .sec-item3, .sec-item4, .sec-item5, .sec-item6 {
+    margin: 0px;
+    margin-bottom: 15px;
     width: 100%;
     height: 80%;
 }
@@ -570,18 +677,13 @@ footer {
     footer {
         display: flex;
         flex-direction: column;
-    }
-    .liste-sidenav {
-        flex-direction: row;
-        justify-content: center;
-    }  
-    .liste-sidenav li {
-        margin: 0 10px;
-    }
-    main  {
-        min-height: auto;
+        padding: 5px;
+        margin-bottom: 5px;
     }
     footer section {
         grid-column: 1fr;
+    }
+    footer li {
+        margin-right: 0px;
     }
 }
