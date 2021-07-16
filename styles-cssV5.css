@@ -48,8 +48,10 @@ table {
 }
 @import url(Raleway/static/Raleway-Medium.ttf);
 .container-grille {
+    margin: auto;
     height: 100vh;
     width: 100%;
+    max-width: 1820px;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 1fr 1fr 3fr 1fr ;
@@ -64,12 +66,19 @@ table {
 }
 /*-----------------------Header part-----------------------
 -------------------------Search bar part------------------*/
+.input-group {
+    border: 2px solid #f2f2f2;
+    height: 52px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
 form img {
     width: 45px;
-    height: 45px;
+    height: 49px;
     background-color: #f2f2f2;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
     position: relative;
     padding: 15px;
 }
@@ -77,8 +86,8 @@ form img {
     display: flex;
 }
 input {
-    height: 47px;
-    border-color: #DEEBFF;
+    height: 49px;
+    border: transparent;
 }
 .btn {
     color: white;
@@ -86,7 +95,7 @@ input {
     background-color:#0065FC;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 47px;
+    height: 49px;
     width: 90px;
 }
 .btn-icone {
@@ -94,7 +103,6 @@ input {
 }
 /*------------------------Filtre header + Li / Ul-------------------------*/
 header {
-    margin: 30px;
     grid-column: span 1;
     padding: 30px;
     font-size: 15px;
@@ -136,18 +144,13 @@ strong {
 }
 
 .liste-sidenav, .liste-sidenav1 li a {
+    font-weight: bolder;
     font-size: 18px ;
-    color:#0065FC ;
+    color:black ;
 }
 hr.line {
     display: none;
 }
-.logo-aside2 {
-    margin-right: 5px;
-    width:15px;
-    float: left;
-}
-
 .liste-sidenav1 li:hover {
     box-shadow: 10px 5px 5px #DEEBFF;
 }
@@ -198,22 +201,27 @@ nav ul {
 .logo-reservia {
     float: left;
 }
-.liste-sidenav ,.inscrip, a:link {
+.cool-link2:visited:link {
+    color: black;
+}
+.liste-sidenav ,.inscrip, .cool-link:link {
     color: #0065FC;
 }
-.liste-sidenav ,.inscrip, a:visited {
+.liste-sidenav ,.inscrip, .cool-link:visited {
     color: #0065FC;
 }
 .liste-sidenav .inscrip, a:hover {
-    color : black;
+    color : #0065FC;
 }
-.cool-link:hover {
-    padding-top: 59px;
-    border-top: 3px solid #0065FC;
+.cool-link2:hover, .cool-link:hover {
+    padding-top: 30px;
+    border-top: 5px solid #0065FC;
 }
 /*-----------------------Main part-----------------------*/
 main {
-    margin : 25px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right : 25px;
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 50px;
@@ -263,29 +271,23 @@ main {
 }
 /*-----------------------Aside part-----------------------*/
 aside {
-    margin-right: 30px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
     background-color: #f2f2f2;
     border-radius: 20px;
     font-size: 22px;
     color: #333;
     grid-area: aside;
 }
-aside p {
+#Float {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.fa-chart-line {
-    float: right;
-    width: 30px;
-    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 .aside-item {
-    margin: 60px;
     height: 200px;
+    margin-bottom: 20px;
     width: auto;
     display: flex;
     border-radius: 30px;
@@ -293,6 +295,10 @@ aside p {
 }
 .aside-item a {
     max-width: 50%;
+    padding: 5px;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 .aside-item img {
     border-top-left-radius: 30px;
@@ -300,14 +306,13 @@ aside p {
     object-fit: cover;
     align-self: flex-start;
     width : 100%;
-    height: 200px;
+    height: 100%;
 }
 .aside-text {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     padding:15px;
     background-color: white;
-    max-height: 200px;
     width: 100%;
 }
 /*-----------------------Section part-----------------------*/
@@ -318,18 +323,16 @@ section {
     grid-area: section ;
 }
 .column {
-    flex: auto;
+    margin: 15px;
 }
-
-.grid-sec {
+.display-sec {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
-
 .sec-item1 {
-    height: 600px;
-    width: 350px;
-    margin: 5px;
+    height: 500px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
@@ -337,7 +340,7 @@ section {
 .sec-item1 a {
     display: flex;
     width: 100%;
-    height: 550px;
+    height: 450px;
 }
 .sec-item1 img {
     border-top-left-radius: 30px;
@@ -346,16 +349,16 @@ section {
     width: 100%;
 }
 .sec-item2 {
-    height: 400px;
-    width: 350px;
-    margin: 5px;
+    margin-bottom: 50px;
+    height: 250px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
 }
 .sec-item2 a {
     display: flex;
-    height: 350px;
+    height: 200px;
     width: 100%;
 }
 .sec-item2 img {
@@ -365,9 +368,8 @@ section {
     object-fit: cover;
 }
 .sec-item3 {
-    margin: 5px;
     height: 200px;
-    width: 350px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
@@ -384,16 +386,15 @@ section {
     object-fit: cover;
 }
 .sec-item4 {
-    height: 600px;
-    width: 350px;
-    margin: 5px;
+    height: 500px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
 }
 .sec-item4 a {
     display: flex;
-    height: 550px;
+    height: 450px;
     width: 100%;
 }
 .sec-item4 img {
@@ -403,15 +404,15 @@ section {
     width: 100%;
 }
 .sec-item5 {
-    margin: 5px;
-    height: 300px;
-    width: 350px;
+    margin-bottom: 50px;
+    height: 200px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
 }
 .sec-item5 a {
-    height: 250px;
+    height: 150px;
     width: 100%;
     display: flex;
 }
@@ -422,15 +423,14 @@ section {
     object-fit: cover;
 }
 .sec-item6 {
-    height: 300px;
-    width: 350px;
-    margin: 5px;
+    height: 250px;
+    width: 400px;
     border-radius: 30px;
     background-color: white;
     box-shadow: 10px 5px 5px #e8e8e8
 }
 .sec-item6 a {
-    height: 250px;
+    height: 200px;
     width: 100%;
     display: flex;
 }
@@ -446,9 +446,7 @@ section {
 }
 /*-----------------------Footer section-----------------------------*/
 footer {
-    grid-column: span 2;
     padding: 30px;
-    text-align: center;
     font-size: 20px;
     background-color: #F2F2F2;
     color: black;
@@ -494,9 +492,72 @@ footer li  {
     grid-column: 3;
     grid-row: 1;
 }
+
 /*-----------------------Media Queries 1350px-----------------------*/
-/*-----------------------Faire le media queries de 1243px a 1518px---------------*/
-@media screen and (max-width: 1312px) {
+@media screen and (min-width:1036px) and (max-width: 1346px) {
+    body {
+        background-color: teal;
+    }
+    .container-grille {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 1fr 1fr 3fr 1fr ;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "header header header header header header header"
+    "main main main main aside aside aside"
+    "section section section section section section section"
+    "footer footer footer footer footer footer footer"
+    ;
+    }
+/*----------------------Header queries 994px-1346px------------------*/
+nav ul {
+    justify-content: center;
+}
+    .liste-sidenav1 ul {
+        flex-wrap: wrap;
+    }
+    .liste-sidenav1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .liste-sidenav1 h2 {
+        margin-bottom: 15px;
+    }
+/*----------------------Main queries 994px-1346px--------------------*/
+    .galerie-item {
+    width: auto;
+    }
+
+/*----------------------Aside queries 994px-1346px-------------------*/
+    .aside-item {
+        height: 350px;
+        flex-wrap: wrap;
+        margin-bottom: 300px;
+    }
+    .aside-item a {
+        height: 350px;
+        max-width: 100%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 30px;
+    }
+    .aside-item img {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 30px;
+    }
+    .aside-text {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+    }
+/*-----------------------Section queries 994px-1346px-------------------*/
+    section {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+/*-------------------------Media queries 1036px---------------------------*/
+@media screen and (max-width: 1036px) {
     body {
         margin:0px
     }
@@ -518,6 +579,9 @@ footer li  {
         ;
     }
 /*----------------------Header media queries-------------------*/
+header main aside section footer {
+    font-size: 11px;
+}
 header p {
     display: flex;
     margin-top: 15px;
@@ -558,11 +622,19 @@ nav ul {
 }
 .liste-sidenav1 {
     flex-direction: column;
-    justify-content: normal;
     align-items: normal;
+}
+.liste-sidenav1 h2 {
+    margin-bottom: 15px;
 }
 .liste-sidenav1 ul {
     flex-wrap: wrap;
+    margin-left: 0px;
+    font-size: 15px;
+}
+.li-box {
+    margin: 5px;
+    margin-right: 0px;
 }
 .liste-sidenav {
     flex-direction: row;
@@ -586,10 +658,9 @@ nav {
     color: white;
     border-color: #f2f2f2;
     background-color:#0065FC;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
     height: 47px;
-    width: 40px;
+    width: 45px;
 }
 /*----------------------Main media queries---------------------*/
     main {
@@ -661,17 +732,26 @@ section {
     flex-direction: column;
     flex-wrap: wrap;
 }
+.column {
+    margin: 0px;
+}
+.sec-item1 a, .sec-item2 a, .sec-item3 a, .sec-item4 a, .sec-item5 a, .sec-item6 a {
+    width: auto;
+}
 .sec-item1, .sec-item2, .sec-item3, .sec-item4, .sec-item5, .sec-item6 {
     margin: 0px;
     margin-bottom: 15px;
     width: 100%;
-    height: 80%;
+    height: auto;
 }
 .sec-item1 img, .sec-item2 img, .sec-item3 img, .sec-item4 img, .sec-item5 img, .sec-item6 img {
     object-fit: cover;
 }
 .sec-item1 a, .sec-item2 a, .sec-item3 a, .sec-item4 a, .sec-item5 a, .sec-item6 a {
     height: 200px;
+}
+.sec-text {
+    padding: 25px;
 }
 /*-------------------------Footer Media Queries----------------------*/
     footer {
