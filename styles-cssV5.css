@@ -68,8 +68,10 @@ table {
 
 -------------------------Search bar part------------------*/
 .input-group {
+    display: flex;
     border: 2px solid #f2f2f2;
     height: 52px;
+    width: -moz-fit-content;
     width: fit-content;
     border-radius: 10px;
 }
@@ -81,9 +83,6 @@ form img {
     border-top-left-radius: 5px;
     position: relative;
     padding: 15px;
-}
-.input-group {
-    display: flex;
 }
 input {
     height: 49px;
@@ -113,9 +112,6 @@ header {
 header p {
     display: none;
 }
-ul {
-    display: flex;
-}
 .li-box{
     border: solid thin #DEEBFF;
     border-left:  transparent;
@@ -124,6 +120,10 @@ ul {
     border-radius: 50px;
     height: 45px;
     padding-right: 10px;
+}
+ul {
+    display: flex;
+    margin-left: 30px;
 }
 a {
     text-decoration: none;
@@ -140,6 +140,7 @@ strong {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 10px;
 }
 .liste-sidenav, .liste-sidenav1 li a {
     font-weight: bolder;
@@ -202,16 +203,14 @@ nav ul {
 .cool-link2:link ,.cool-link2:visited,.charte a {
     color: black;
 }
-.liste-sidenav ,.inscrip, .cool-link1:link, .cool-link3:link {
+.liste-sidenav , .cool-link1:link, .cool-link3:link {
     color: #0065FC;
 }
-.liste-sidenav ,.inscrip, .cool-link1:visited, .cool-link3:visited {
+.liste-sidenav,.cool-link1:visited,.cool-link3:visited {
     color: #0065FC;
-}
-.liste-sidenav .inscrip, a:hover {
-    color : #0065FC;
 }
 .cool-link1:hover, .cool-link2:hover, .cool-link3:hover {
+    color : #0065FC;
     padding-top: 30px;
     border-top: 5px solid #0065FC;
 }
@@ -560,6 +559,7 @@ nav ul {
         max-width: 100%;
         border-bottom-left-radius: 0px;
         border-top-right-radius: 30px;
+        width: -moz-available;
     }
     .aside-item img {
         height: 100%;
@@ -752,6 +752,7 @@ nav ul {
     }
     .aside-item a {
         height: 200px;
+        width: 500px;
     }
     .aside-item img {
     border-top-left-radius: 30px;
@@ -810,6 +811,10 @@ nav ul {
         padding: 5px;
         padding-top: 30px;
         margin-bottom: 5px;
+    }
+    .title {
+        margin-top: 10px;
+        margin-left:30px;
     }
     footer section {
         grid-column: 1fr;
