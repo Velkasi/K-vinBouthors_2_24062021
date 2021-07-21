@@ -50,7 +50,7 @@ table {
 .container-grille {
     margin: auto;
     height: 100vh;
-    width: 100%;
+    width: auto;
     max-width: 1820px;
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -115,7 +115,6 @@ header p {
 }
 ul {
     display: flex;
-    margin-left: 30px;
 }
 .li-box{
     border: solid thin #DEEBFF;
@@ -203,16 +202,16 @@ nav ul {
 .cool-link2:link ,.cool-link2:visited,.charte a {
     color: black;
 }
-.liste-sidenav ,.inscrip, .cool-link:link {
+.liste-sidenav ,.inscrip, .cool-link1:link, .cool-link3:link {
     color: #0065FC;
 }
-.liste-sidenav ,.inscrip, .cool-link:visited {
+.liste-sidenav ,.inscrip, .cool-link1:visited, .cool-link3:visited {
     color: #0065FC;
 }
 .liste-sidenav .inscrip, a:hover {
     color : #0065FC;
 }
-.cool-link2:hover, .cool-link:hover {
+.cool-link1:hover, .cool-link2:hover, .cool-link3:hover {
     padding-top: 30px;
     border-top: 5px solid #0065FC;
 }
@@ -612,7 +611,16 @@ nav ul {
     }
     nav ul {
     justify-content: center;
-    margin-left: 80px;
+    width: 100%;
+    }
+    nav li {
+        margin-right: 0px;
+    }
+    .cool-link1 {
+        padding-right: 75px;
+    }
+    .cool-link2 {
+        padding-right: 30px;
     }
     .logo-reservia {
     float: none;
@@ -670,9 +678,6 @@ nav ul {
     }
     .liste-sidenav li {
     margin: 0 10px;
-    }
-    .cool-link {
-    margin-right: 25px;
     }
     nav {
     display: flex;
