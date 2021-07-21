@@ -112,6 +112,12 @@ header {
 header p {
     display: none;
 }
+<<<<<<< HEAD
+=======
+ul {
+    display: flex;
+}
+>>>>>>> c32fbed0fa2e49159938c04c8a5346f3f38a0133
 .li-box{
     border: solid thin #DEEBFF;
     border-left:  transparent;
@@ -203,14 +209,26 @@ nav ul {
 .cool-link2:link ,.cool-link2:visited,.charte a {
     color: black;
 }
+<<<<<<< HEAD
 .liste-sidenav , .cool-link1:link, .cool-link3:link {
     color: #0065FC;
 }
 .liste-sidenav,.cool-link1:visited,.cool-link3:visited {
+=======
+.liste-sidenav ,.inscrip, .cool-link1:link, .cool-link3:link {
+    color: #0065FC;
+}
+.liste-sidenav ,.inscrip, .cool-link1:visited, .cool-link3:visited {
+>>>>>>> c32fbed0fa2e49159938c04c8a5346f3f38a0133
     color: #0065FC;
 }
 .cool-link1:hover, .cool-link2:hover, .cool-link3:hover {
     color : #0065FC;
+<<<<<<< HEAD
+=======
+}
+.cool-link1:hover, .cool-link2:hover, .cool-link3:hover {
+>>>>>>> c32fbed0fa2e49159938c04c8a5346f3f38a0133
     padding-top: 30px;
     border-top: 5px solid #0065FC;
 }
